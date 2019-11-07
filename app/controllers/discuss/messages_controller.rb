@@ -28,7 +28,7 @@ module Discuss
     # [e] avoiding validation exception. Should be done nicer
     def reply
       @message = Message.find(params[:message_id])
-      if params[:message][:body]
+      if params[:message][:body].present?
         if @message.draft = draft?
           set_flash_message :notice, :saved
         else
