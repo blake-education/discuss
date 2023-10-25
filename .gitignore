@@ -1,7 +1,6 @@
 .*.sw?
 .DS_Store
 /.bundle/
-/Gemfile.lock
 /coverage
 /log/*.log
 /test/dummy/.sass-cache
