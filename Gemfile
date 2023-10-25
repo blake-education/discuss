@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gemspec path: '.'
 
+gem 'appraisal'
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
