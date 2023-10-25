@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Discuss
-  class MailboxTest < MiniTest::Spec
+  class MailboxTest < Minitest::Spec
     before do
       @draft = @sender.messages.create(body: 'lorem ipsum', draft_recipients: [@recipient])
       @message = @sender.messages.create(body: 'lorem ipsum', draft_recipients: [@recipient])

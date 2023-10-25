@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Discuss
-  class ConversationTest < MiniTest::Spec
+  class ConversationTest < Minitest::Spec
     before do
       @message = @sender.messages.create(body: 'lorem ipsum', draft_recipients: [@recipient])
       @message.send!

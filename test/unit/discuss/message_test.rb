@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Discuss
-  class MessageTest < MiniTest::Spec
+  class MessageTest < Minitest::Spec
     it 'must have body and recipients' do
       message = Message.new()
 
