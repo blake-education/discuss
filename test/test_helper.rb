@@ -9,14 +9,14 @@ require 'minitest/mock'
 require 'capybara/rails'
 
 require 'minitest/reporters'
-MiniTest::Reporters.use! MiniTest::Reporters::SpecReporter.new
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 Rails.backtrace_cleaner.remove_silencers!
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
-module MiniTest
+module Minitest
   class Spec
     before(:each) do
       DatabaseCleaner.start
@@ -31,7 +31,7 @@ module MiniTest
   end
 end
 
-class FeatureTest < MiniTest::Spec
+class FeatureTest < Minitest::Spec
   include Rails.application.routes.url_helpers # to get url_helpers working
   include Capybara::DSL # to get capybara working
 

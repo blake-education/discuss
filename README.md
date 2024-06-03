@@ -145,8 +145,14 @@ rails generate discuss:views
 ## Running the tests
 
 ```shell
-RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load 
-bundle exec rake test
+RAILS_ENV=test bundle exec rails db:migrate
+bundle exec rails test
+```
+
+or to run tests against all supported Rails versions
+
+```
+bundle exec appraisal rails test
 ```
 
 ## TODO
